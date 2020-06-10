@@ -46,6 +46,39 @@ function addRow() {
     td4.innerHTML = inputCost.value;
 }
 
+//Сортировка таблицы
+function sortMotoTable(index, dataType, tableIsSorted) {
+    const tbody = motoTable.querySelector('tbody');
+
+    function compareRows(firstRow, secondRow) {
+        const dataFirstRow = firstRow.cells[index].innerHTML;
+        const dataSecondRow = secondRow.cells[index].innerHTML;
+        switch (dataType) {
+            case 'text': {
+                if (dataFirstRow < dataSecondRow)
+                    return -1;
+                if (dataFirstRow > dataSecondRow)
+                    return 1;
+                return 0;
+            }
+            case 'integer': {
+                return dataFirstRow - dataSecondRow;
+            }
+        }
+    }
+
+    let rows = [].slice.call(tbody.rows);
+    rows.sort(compareRows);
+    if (tableIsSorted)
+        rows.reverse();
+
+    motoTable.removeChild(tbody);
+    for (let i = 0; i < rows.length; i++) {
+        tbody.appendChild(rows[i]);
+    }
+    motoTable.appendChild(tbody);
+}
+
 //Клик на кнопку добавить
 formAdd.addEventListener('submit', (e) => {
     e.preventDefault();
