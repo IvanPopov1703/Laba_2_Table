@@ -84,3 +84,24 @@ formAdd.addEventListener('submit', (e) => {
     e.preventDefault();
     addRow();
 });
+
+//Функция для удаления и сортировки
+motoTable.addEventListener('click', (e) => {
+
+    //Удаление
+    if (e.target.tagName === "BUTTON") {
+        let rowIndex = e.target.closest('TR').rowIndex;
+        motoTable.deleteRow(rowIndex);
+    }
+
+    //Сортировка
+    if (e.target.tagName === 'TH') {
+        let currentIndex = e.target.cellIndex;
+        sortMotoTable(currentIndex, e.target.getAttribute('data-type'), selectedColumn === currentIndex);
+        if (selectedColumn === currentIndex) {
+            selectedColumn = -1;
+        } else {
+            selectedColumn = currentIndex;
+        }
+    }
+});
