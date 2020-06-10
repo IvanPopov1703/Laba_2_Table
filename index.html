@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Список мотоциклов</title>
+    <script defer type="text/javascript" src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<table id="motorcycleTable">
+    <thead>
+    <tr>
+        <th data-type="text">Модель</th>
+        <th data-type="integer">Мощность, л.с.</th>
+        <th data-type="integer">Объём двигателя, см<sup>3</sup></th>
+        <th data-type="integer">Стоимость</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Hyundai i40</td>
+        <td>135</td>
+        <td>505</td>
+        <td>140</td>
+        <td style="border: 0; text-align: left">
+            <button>Удалить</button>
+        </td>
+    </tr>
+    <tr>
+        <td>KIA Optima</td>
+        <td>150</td>
+        <td>510</td>
+        <td>155</td>
+        <td style="border: 0; text-align: left">
+            <button>Удалить</button>
+        </td>
+    </tr>
+    <tr>
+        <td>Ford Mondeo</td>
+        <td>149</td>
+        <td>516</td>
+        <td>140</td>
+        <td style="border: 0; text-align: left">
+            <button type="submit">Удалить</button>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<form id="addMotorcycle">
+    <table>
+        <caption>Добавление мотоцикла в таблицу</caption>
+        <tr>
+            <td><label for="inputModel">Модель</label></td>
+            <td><input required id="inputModel" type="text" placeholder="Модель"><br></td>
+        </tr>
+        <tr>
+            <td><label for="inputPower">Мощность, л.с.</label></td>
+            <td><input required id="inputPower" type="number" placeholder="Мощность"><br></td>
+        </tr>
+        <tr>
+            <td><label for="inputVolume">Объём двигателя, см<sup>3</sup></label></td>
+            <td><input required id="inputVolume" type="number" placeholder="Объём"><br></td>
+        </tr>
+        <tr>
+            <td><label for="inputCost">Стоимость</label></td>
+            <td><input required id="inputCost" type="number" placeholder="Ввдедите стоимость"><br></td>
+        </tr>
+    </table>
+    <div><button type="submit">Добавить</button></div>
+</form>
+</body>
+</html>
