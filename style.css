@@ -1,0 +1,47 @@
+body{
+    margin: 0;
+    background: #FFFCFC;
+}
+
+table{
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+th, td {
+    border: 2px solid black;
+    width: 200px;
+    height: 35px;
+    padding: 10px;
+    text-align: center;
+}
+
+button{
+    font-size: 15px;
+}
+
+form{
+    border: 1px solid #A7FBCE;
+    height: 330px;
+    width: 400px;
+    margin-top: 20px;
+    border-radius: 10px;
+    margin-left: 20px;
+    background: #A7FBCE;
+}
+
+form td{
+    border: 0 solid black;
+    width: 150px;
+    height: 35px;
+    padding: 10px;
+    text-align: left;
+}
+
+div{
+    height: 30px;
+    width: 100px;
+    margin-left: 150px;
+    margin-top: 20px;
+}
